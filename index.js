@@ -4,14 +4,14 @@ import cors from "cors";
 import { PORT } from './src/config/config.js';
 import  { RouterUsuer } from './src/router/userRouter.js';
 import { sequelize } from "./src/db/conexion.js";
-// import './relations.js'
+
 const _PORT = PORT || 3000;
 const app = express();
 app.use(express.json());
 app.use(cors({
     origin:[
-    'http://localhost:8100/api',
-    'https://aws-node.netlify.app/'
+    'http://localhost:8100',
+    'https://aws-node.netlify.app'
 ],
     methods: ['GET', 'POST', 'PUT', 'DELETE','OPTIONS'],
 }));
